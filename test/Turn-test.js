@@ -12,4 +12,9 @@ describe('Turn', function() {
     const turn = new Turn();
     expect(turn).to.be.an.instanceof(Turn);
   });
+  it('Turn should be instantiated with a card', function() {
+    const card = new Card(1, 'What allows you to define a set of related information using key-value pairs?', ['object', 'array', 'function'], 'object');
+    const turn = new Turn("array", card);
+    expect(turn.card).to.equal(card);
+  });
 })
