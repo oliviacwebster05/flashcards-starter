@@ -19,8 +19,11 @@ describe('Round', () => {
   it('should be a function', () => {
     expect(Round).to.be.a('function');
   });
-  it('should be an instance of Round', function() {
+  it('should be an instance of Round', () => {
    expect(round).to.be.an.instanceof(Round);
- });
+  });
+  it('should return card being played', () => {
+  expect(round.returnCurrentCard()).to.equal(card1);
+  });
 
 })
