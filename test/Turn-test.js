@@ -3,7 +3,6 @@ const expect = chai.expect;
 const Turn = require('../src/Turn');
 const Card = require('../src/Card');
 
-
 describe('Turn', () => {
   let card, turn;
   beforeEach(() => {
