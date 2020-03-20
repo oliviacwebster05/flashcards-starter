@@ -17,14 +17,11 @@ class Turn {
 
   giveFeedback() {
     if (this.guess === this.card.correctAnswer) {
-  return 'correct!';
+      return 'correct!';
+    } else {
+      return 'incorrect!';
+    }
   }
-  else {
-   return 'incorrect!';
-  }
-   }
-
-  }
-
+}
 
 module.exports = Turn;

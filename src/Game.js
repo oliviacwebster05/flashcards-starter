@@ -11,19 +11,19 @@ class Game {
     this.cards = [];
   }
 
-  printMessage(deck, round) {
-      console.log(`Welcome to FlashCards! You are playing with ${deck.countCards()} cards.
+  printMessage(deck) {
+    console.log(`Welcome to FlashCards! You are playing with ${deck.countCards()} cards.
 -----------------------------------------------------------------------`)
   }
 
   printQuestion(round) {
-      util.main(round);
+    util.main(round);
   }
   start() {
-      prototypeQuestions.forEach(question => {
-        let card = new Card(question.id, question.question, question.answers, question.correctAnswer);
-        this.cards.push(card);
-      })
+    prototypeQuestions.forEach(question => {
+      let card = new Card(question.id, question.question, question.answers, question.correctAnswer);
+      this.cards.push(card);
+    })
     const deck = new Deck(prototypeQuestions);
     const round = new Round(deck);
     this.currentRound = round;
