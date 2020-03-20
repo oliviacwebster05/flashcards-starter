@@ -32,8 +32,14 @@ describe('Round', () => {
     expect(round.turns).to.equal(2);
   });
   it('should record incorrect guesses', () => {
-    round.takeTurn();
+    round.takeTurn('array');
     expect(round.incorrectGuesses.length).to.equal(1);
+  });
+  it('should calculate percent of correct guesses', () => {
+    round.takeTurn('array');
+    round.takeTurn('array');
+    round.takeTurn('mutator method');
+    expect(round.calculatePercentCorrect()).to.equal(67);
   });
 
 })
