@@ -7,7 +7,7 @@ const Card = require('../src/Card');
 const Game = require('../src/Game');
 
 describe('Game', () => {
-  let game, deck, round;
+  let game, deck, round, card1, card2, card3;
 
   beforeEach(() => {
     game = new Game();
