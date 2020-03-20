@@ -30,7 +30,7 @@ describe('Game', () => {
     game.start()
     expect(deck).to.be.an.instanceof(Deck);
   });
-  it('should create a new instance of Round when ga,e starts', () => {
+  it('should create a new instance of Round when game starts', () => {
     game.start()
     expect(round).to.be.an.instanceof(Round);
   });
