@@ -23,9 +23,7 @@ class Round {
   return Math.round(100 - incorrect);
 }
  endRound() {
-  const percentCorrect = this.calculatePercentCorrect();
-  const endMessage = console.log(`** Round over! ** You answered ${percentCorrect}% of the questions correctly!`);
-  return endMessage;
+ return console.log(`** Round over! ** You answered ${this.calculatePercentCorrect()}% of the questions correctly!`);
 }
 }
 module.exports = Round;
