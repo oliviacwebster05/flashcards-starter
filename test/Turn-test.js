@@ -8,7 +8,7 @@ describe('Turn', () => {
   let card, turn;
   beforeEach(() => {
     card = new Card(1, 'What allows you to define a set of related information using key-value pairs?', ['object', 'array', 'function'], 'object');
-    turn = new Turn("array", card);
+    turn = new Turn('array', card);
   });
   it('should be a function', () => {
     expect(Turn).to.be.a('function');
@@ -21,5 +21,25 @@ describe('Turn', () => {
   });
   it('Turn should be instantiated with a guess', () => {
     expect(turn.guess).to.equal("array");
+  });
+  it('Should return a guess', () => {
+    expect(turn.returnGuess()).to.equal("array");
+  });
+  it('Should return a card', () => {
+    expect(turn.returnCard()).to.equal(card);
+  });
+  it('Should return false if the guess is false', () => {
+    expect(turn.evaluateGuess()).to.equal(false);
+  });
+  it('Should return true if the guess is true', () => {
+    const turn2 = new Turn('object', card);
+    expect(turn2.evaluateGuess()).to.equal(true);
+  });
+  it('Should return "incorrect!" if the guess is incorrect', () => {
+    expect(turn.giveFeedback()).to.equal('incorrect!');
+  });
+  it('Should return "correct!" if the guess is correct', () => {
+    const turn2 = new Turn('object', card);
+    expect(turn2.giveFeedback()).to.equal('correct!');
   });
 })
