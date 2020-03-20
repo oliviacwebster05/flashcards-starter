@@ -41,5 +41,12 @@ describe('Round', () => {
     round.takeTurn('mutator method');
     expect(round.calculatePercentCorrect()).to.equal(67);
   });
+  it('should be able to end round display message', () => {
+   round.takeTurn('array');
+   round.takeTurn('array');
+   round.takeTurn('mutator method');
+   const percentCorrect = round.calculatePercentCorrect();
+   expect(round.endRound()).to.equal(console.log(`** Round over! ** You answered ${percentCorrect}% of the questions correctly!`));
+ });
 
 })
