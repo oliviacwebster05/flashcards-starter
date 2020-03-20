@@ -20,10 +20,16 @@ describe('Round', () => {
     expect(Round).to.be.a('function');
   });
   it('should be an instance of Round', () => {
-   expect(round).to.be.an.instanceof(Round);
+    expect(round).to.be.an.instanceof(Round);
   });
   it('should return card being played', () => {
-  expect(round.returnCurrentCard()).to.equal(card1);
+    expect(round.returnCurrentCard()).to.equal(card1);
+  });
+  it('should be able to take a turn and update turns count', () => {
+    expect(round.turns).to.equal(0);
+    expect(round.takeTurn('object')).to.equal('correct!');
+    expect(round.takeTurn('function')).to.equal('incorrect!');
+    expect(round.turns).to.equal(2);
   });
 
 })
