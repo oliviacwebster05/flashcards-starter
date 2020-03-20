@@ -16,8 +16,12 @@ class Turn {
   }
 
   giveFeedback() {
-    return (this.guess === this.card.correctAnswer ? 'correct!':
-    'incorrect!')
+    if (this.guess === this.card.correctAnswer) {
+  return 'correct!';
+  }
+  else {
+   return 'incorrect!';
+  }
    }
 
   }

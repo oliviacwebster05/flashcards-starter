@@ -31,14 +31,16 @@ describe('Turn', () => {
     expect(turn.evaluateGuess()).to.equal(false);
   });
   it('Should return true if the guess is true', () => {
-    const turn2 = new Turn('object', card);
+    const card2 = new Card(2, "What is a comma-separated list of related values?", ["array", "object", "function"], "array");
+    const turn2 = new Turn('array', card2);
     expect(turn2.evaluateGuess()).to.equal(true);
   });
   it('Should return "incorrect!" if the guess is incorrect', () => {
     expect(turn.giveFeedback()).to.equal('incorrect!');
   });
   it('Should return "correct!" if the guess is correct', () => {
-    const turn2 = new Turn('object', card);
+    const card2 = new Card(2, "What is a comma-separated list of related values?", ["array", "object", "function"], "array");
+    const turn2 = new Turn('array', card2);
     expect(turn2.giveFeedback()).to.equal('correct!');
   });
 })
