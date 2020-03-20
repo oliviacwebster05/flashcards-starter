@@ -45,7 +45,7 @@ describe('Round', () => {
    round.takeTurn('array');
    round.takeTurn('array');
    round.takeTurn('mutator method');
-   expect(round.endRound()).to.equal(console.log(`** Round over! ** You answered ${round.calculatePercentCorrect()}% of the questions correctly!`));
+   expect(round.endRound()).to.equal(console.log(`** Round over! ** You answered ${round.calculatePercentCorrect()}% of the questions correctly! It took you 0 minutes and 0 seconds to finish the game!`));
  });
 
 })
