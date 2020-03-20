@@ -3,6 +3,21 @@ class Turn {
     this.card = card;
     this.guess = guess;
   }
+  returnGuess() {
+
+  }
+
+  returnCard() {
+
+  }
+
+  evaluateGuess() {
+
+  }
+
+  giveFeedback() {
+  
+  }
 }
 
 module.exports = Turn;
