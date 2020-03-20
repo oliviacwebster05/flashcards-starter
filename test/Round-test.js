@@ -27,9 +27,13 @@ describe('Round', () => {
   });
   it('should be able to take a turn and update turns count', () => {
     expect(round.turns).to.equal(0);
-    expect(round.takeTurn('object')).to.equal('correct!');
-    expect(round.takeTurn('function')).to.equal('incorrect!');
+    expect(round.takeTurn('array')).to.equal('incorrect!');
+    expect(round.takeTurn('array')).to.equal('correct!');
     expect(round.turns).to.equal(2);
+  });
+  it('should record incorrect guesses', () => {
+    round.takeTurn();
+    expect(round.incorrectGuesses.length).to.equal(1);
   });
 
 })
